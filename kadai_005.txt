@@ -1,0 +1,37 @@
+PS C:\Users\choco> # カレントディレクトリにgit_tutorialディレクトリを作成する
+>> mkdir git_challenge
+
+
+    ディレクトリ: C:\Users\choco
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2024/10/27     18:05                git_challenge
+
+
+PS C:\Users\choco> # 作成したgit_tutorialディレクトリに移動する
+>> cd git_challenge
+PS C:\Users\choco\git_challenge> # カレントディレクトリにローカルリポジトリを新規作成する
+>> git init
+Initialized empty Git repository in C:/Users/choco/git_challenge/.git/
+PS C:\Users\choco\git_challenge> git add git_challenge
+fatal: pathspec 'git_challenge' did not match any files
+PS C:\Users\choco\git_challenge> git add hello_world
+fatal: pathspec 'hello_world' did not match any files
+PS C:\Users\choco\git_challenge> git add hello_world.txt
+PS C:\Users\choco\git_challenge> git commit -m "一回目のコミット"              
+[main (root-commit) 2f22d94] 一回目のコミット
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+PS C:\Users\choco\git_challenge> git status
+On branch main
+nothing to commit, working tree clean
+PS C:\Users\choco\git_challenge> git add hello_world.txt
+PS C:\Users\choco\git_challenge> git commit -m "二回目のコミット" 
+[main d57b4d9] 二回目のコミット
+ 1 file changed, 2 insertions(+)
+PS C:\Users\choco\git_challenge> # コミットログを1行で表示する
+>> git log --oneline
+d57b4d9 (HEAD -> main) 二回目のコミット
+2f22d94 一回目のコミット
